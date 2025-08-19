@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Lottie Hover Test</title>
+	</head>
+	<body>
+		<div
+			class="card-face"
+			style="
+				width: 300px;
+				height: 300px;
+				border: 1px solid gray;
+				background-color: rebeccapurple;
+			"
+		>
+			<lottie-player
+				class="card-lottie"
+				src="https://www.accenture.com/content/dam/accenture/final/images/lottie/awards/Accenture_CardIllu_Anim_003_Timed_Alpha_blue.json"
+				background="transparent"
+			>
+			</lottie-player>
+		</div>
+
+		<!-- Load Lottie player -->
+		<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+		<script>
+			let cards = document.querySelectorAll(".card-face");
+			let lotties = document.querySelectorAll(".card-lottie");
+
+			cards.forEach((card, i) => {
+				card.addEventListener("mouseenter", () => {
+					console.log("hover on card", i);
+					lotties[i].play();
+				});
+
+				card.addEventListener("mouseleave", () => {
+					lotties[i].stop();
+				});
+			});
+		</script>
+	</body>
+</html>
