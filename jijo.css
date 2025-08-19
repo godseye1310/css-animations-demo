@@ -1,0 +1,167 @@
+* {
+	box-sizing: border-box;
+}
+
+h1 {
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	font-weight: 500;
+}
+
+.why-choose-us {
+	position: relative;
+	background-image: url("https://jijoventure.com/_next/static/media/dottedCurve.d567a6a2.svg");
+	background-repeat: no-repeat;
+	width: 100%;
+	height: auto;
+	background-size: cover;
+
+	background-position: center;
+	background-color: rgb(242 242 242 / 1);
+}
+
+.card {
+	position: absolute;
+	width: 30%;
+	background-color: #fff;
+	border-radius: 19px;
+
+	transition: transform 2s ease-in-out;
+	/*  */
+	border: 2px solid gold;
+}
+
+.anime-card-1 {
+	animation: rotateCard-1 15s infinite;
+}
+.anime-card-2 {
+	animation: rotateCard-2 15s infinite;
+}
+.anime-card-3 {
+	animation: rotateCard-3 15s infinite;
+}
+
+@keyframes rotateCard-1 {
+	0% {
+		transform: translate(0);
+		background-color: #fff;
+		color: #000;
+		z-index: 0;
+		opacity: 1;
+	}
+	10% {
+		opacity: 0.3;
+	}
+	30% {
+		opacity: 0.8;
+	}
+	33.33% {
+		transform: translate(225%);
+		background-color: #fff;
+		color: #000;
+		z-index: 2;
+		opacity: 1;
+	}
+	66.66% {
+		transform: translate(115%, 50%);
+		background-color: rgb(153 0 0);
+		color: #fff;
+		z-index: 2;
+	}
+	100% {
+		transform: translate(0);
+		background-color: #fff;
+		color: #000;
+		z-index: 1;
+	}
+}
+
+@keyframes rotateCard-2 {
+	0% {
+		transform: translate(225%);
+		background-color: #fff;
+		color: #000;
+		z-index: 1;
+	}
+	33.33% {
+		transform: translate(115%, 50%);
+		background-color: rgb(153 0 0);
+		color: #fff;
+		z-index: 2;
+	}
+	66.66% {
+		transform: translate(0);
+		background-color: #fff;
+		color: #000;
+		z-index: 1;
+		opacity: 1;
+	}
+	75% {
+		opacity: 0.3;
+	}
+	99% {
+		opacity: 0.8;
+	}
+	100% {
+		transform: translate(225%);
+		background-color: #fff;
+		color: #000;
+		z-index: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes rotateCard-3 {
+	0% {
+		transform: translate(115%, 50%);
+		background-color: rgb(153 0 0);
+		color: #fff;
+		z-index: 2;
+	}
+	33.33% {
+		transform: translate(0);
+		background-color: #fff;
+		color: #000;
+		z-index: 1;
+		opacity: 1;
+	}
+	35% {
+		opacity: 0.3;
+	}
+	65% {
+		opacity: 0.8;
+	}
+	66.66% {
+		transform: translate(225%);
+		background-color: #fff;
+		color: #000;
+		z-index: 0;
+		opacity: 1;
+	}
+	100% {
+		transform: translate(115%, 50%);
+		background-color: rgb(153 0 0);
+		color: #fff;
+		z-index: 2;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.card {
+		position: relative;
+		width: 100%;
+		margin: 10px 0;
+		transition: none;
+	}
+
+	.card:nth-child(2) {
+		background-color: rgb(153 0 0);
+		color: #fff;
+		padding: 10px 0px;
+	}
+
+	.anime-card-1,
+	.anime-card-2,
+	.anime-card-3 {
+		animation: none !important;
+	}
+}
